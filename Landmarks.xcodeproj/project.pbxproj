@@ -6,12 +6,7 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		85656A2F2D0CDE520094B0E9 /* HexagonParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85656A2E2D0CDE520094B0E9 /* HexagonParameters.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
-		85656A2E2D0CDE520094B0E9 /* HexagonParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonParameters.swift; sourceTree = "<group>"; };
 		856F9EBD2D0BEEA500D3EFA7 /* Landmarks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Landmarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -37,7 +32,6 @@
 		856F9EB42D0BEEA500D3EFA7 = {
 			isa = PBXGroup;
 			children = (
-				85656A2E2D0CDE520094B0E9 /* HexagonParameters.swift */,
 				856F9EBF2D0BEEA500D3EFA7 /* Landmarks */,
 				856F9EBE2D0BEEA500D3EFA7 /* Products */,
 			);
@@ -125,7 +119,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85656A2F2D0CDE520094B0E9 /* HexagonParameters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
