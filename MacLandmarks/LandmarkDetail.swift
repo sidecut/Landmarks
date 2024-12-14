@@ -50,7 +50,6 @@ struct LandmarkDetail: View {
             .padding()
         }
         .navigationTitle(landmark.name)
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
@@ -58,4 +57,5 @@ struct LandmarkDetail: View {
     let modelData = ModelData()
     return LandmarkDetail(landmark: modelData.landmarks[0])
         .environment(modelData)
+        .frame(width: 850, height: 700)
 }
