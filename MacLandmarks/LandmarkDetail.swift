@@ -25,8 +25,6 @@ struct LandmarkDetail: View {
             VStack(alignment: .leading, spacing: 20) {
                 HStack(spacing: 24) {
                     CircleImage(image: landmark.image)
-                        .offset(y: -130)
-                        .padding(.bottom, -130)
 
                     VStack(alignment: .leading) {
                         HStack {
@@ -51,6 +49,7 @@ struct LandmarkDetail: View {
                 Text(landmark.description)
             }
             .padding()
+            .offset(y: -50)
         }
         .navigationTitle(landmark.name)
     }
