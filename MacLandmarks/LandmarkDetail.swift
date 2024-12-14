@@ -23,31 +23,33 @@ struct LandmarkDetail: View {
                 .frame(height: 300)
 
             VStack(alignment: .leading, spacing: 20) {
-                CircleImage(image: landmark.image)
-                    .offset(y: -130)
-                    .padding(.bottom, -130)
-
-                VStack(alignment: .leading) {
-                    HStack {
-                        Text(landmark.name)
-                            .font(.title)
-                        FavoriteButton(isSet: $modelData.landmarks[landmarkIndex].isFavorite)
-                    }
+                HStack(spacing: 24) {
+                    CircleImage(image: landmark.image)
+                        .offset(y: -130)
+                        .padding(.bottom, -130)
 
                     VStack(alignment: .leading) {
-                        Text(landmark.park)
-                        Text(landmark.state)
+                        HStack {
+                            Text(landmark.name)
+                                .font(.title)
+                            FavoriteButton(isSet: $modelData.landmarks[landmarkIndex].isFavorite)
+                        }
+
+                        VStack(alignment: .leading) {
+                            Text(landmark.park)
+                            Text(landmark.state)
+                        }
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+
+                        Divider()
+
+                        Text("About \(landmark.name)")
+                            .font(.title2)
+                        Text(landmark.description)
                     }
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
-
-                    Divider()
-
-                    Text("About \(landmark.name)")
-                        .font(.title2)
-                    Text(landmark.description)
+                    .padding()
                 }
-                .padding()
             }
         }
         .navigationTitle(landmark.name)
