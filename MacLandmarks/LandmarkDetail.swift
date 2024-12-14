@@ -41,16 +41,16 @@ struct LandmarkDetail: View {
                         }
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
-
-                        Divider()
-
-                        Text("About \(landmark.name)")
-                            .font(.title2)
-                        Text(landmark.description)
                     }
-                    .padding()
                 }
+
+                Divider()
+
+                Text("About \(landmark.name)")
+                    .font(.title2)
+                Text(landmark.description)
             }
+            .padding()
         }
         .navigationTitle(landmark.name)
     }
