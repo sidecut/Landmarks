@@ -11,6 +11,28 @@
 		856F9EBD2D0BEEA500D3EFA7 /* Landmarks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Landmarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		85656D962D0D70540094B0E9 /* Exceptions for "Landmarks" folder in "MacLandmarks" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+				LandmarksApp.swift,
+				Model/Hike.swift,
+				Model/Landmark.swift,
+				Model/ModelData.swift,
+				Model/Profile.swift,
+				Resources/hikeData.json,
+				Resources/landmarkData.json,
+				Views/Helpers/CircleImage.swift,
+				Views/Helpers/FavoriteButton.swift,
+				Views/Helpers/MapView.swift,
+				Views/Landmarks/LandmarkList.swift,
+				Views/Landmarks/LandmarkRow.swift,
+			);
+			target = 85656CA22D0D684B0094B0E9 /* MacLandmarks */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		85656CA42D0D684C0094B0E9 /* MacLandmarks */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
@@ -19,6 +41,9 @@
 		};
 		856F9EBF2D0BEEA500D3EFA7 /* Landmarks */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				85656D962D0D70540094B0E9 /* Exceptions for "Landmarks" folder in "MacLandmarks" target */,
+			);
 			path = Landmarks;
 			sourceTree = "<group>";
 		};
