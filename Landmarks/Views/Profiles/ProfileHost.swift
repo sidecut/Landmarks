@@ -15,6 +15,12 @@ struct ProfileHost: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             HStack {
+                if editMode?.wrappedValue == .active {
+                    Button("Cancel", role: .cancel) {
+                        editBuffer = modelData.profile
+                        editMode?.animation().wrappedValue = .inactive
+                    }
+                }
                 Spacer()
                 EditButton()
             }
@@ -23,6 +29,12 @@ struct ProfileHost: View {
                 ProfileSummary(profile: modelData.profile)
             } else {
                 ProfileEditor(profile: $editBuffer)
+                    .onAppear {
+                        editBuffer = modelData.profile
+                    }
+                    .onDisappear {
+                        modelData.profile = editBuffer
+                    }
             }
         }
         .padding()
