@@ -16,9 +16,10 @@ struct CategoryRow: View {
             Text(categoryName)
                 .font(.headline)
                 .padding(.leading, 15)
+                .padding(.top, 5)
 
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack(alignment: .top, spacing: 4) {
+                HStack(alignment: .top, spacing: 0) {
                     ForEach(items) { landmark in
                         NavigationLink {
                             LandmarkDetail(landmark: landmark)
@@ -34,8 +35,9 @@ struct CategoryRow: View {
 }
 
 #Preview {
-    var landmarks = ModelData().landmarks
-    CategoryRow(
+    let landmarks = ModelData().landmarks
+    return CategoryRow(
         categoryName: landmarks[0].category.rawValue,
-        items: Array(landmarks.prefix(4)))
+        items: Array(landmarks.prefix(4))
+    )
 }

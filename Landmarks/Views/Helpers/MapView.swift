@@ -5,8 +5,8 @@
 //  Created by James Raden on 12/12/24.
 //
 
-import SwiftUI
 import MapKit
+import SwiftUI
 
 struct MapView: View {
     var coordinate: CLLocationCoordinate2D
