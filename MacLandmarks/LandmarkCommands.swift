@@ -12,6 +12,9 @@ struct LandmarkCommands: Commands {
 
     var body: some Commands {
         SidebarCommands()
+        
+        CommandMenu("Landmark") {
+        }
     }
 }
 
