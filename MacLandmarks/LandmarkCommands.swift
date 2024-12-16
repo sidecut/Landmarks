@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LandmarkCommands: Commands {
+    @FocusedBinding(\.selectedLandmark) var selectedLandmark
+
     var body: some Commands {
         SidebarCommands()
     }
