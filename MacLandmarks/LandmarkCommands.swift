@@ -12,8 +12,12 @@ struct LandmarkCommands: Commands {
 
     var body: some Commands {
         SidebarCommands()
-        
+
         CommandMenu("Landmark") {
+            Button("\(selectedLandmark?.isFavorite == true ? "Remove" : "Mark") as Favorite") {
+                selectedLandmark?.isFavorite.toggle()
+            }
+            .disabled(selectedLandmark == nil)
         }
     }
 }
