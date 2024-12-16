@@ -11,6 +11,17 @@ import SwiftUI
 struct MapView: View {
     var coordinate: CLLocationCoordinate2D
 
+    enum Zoom: String, CaseIterable, Identifiable {
+        case near = "Near"
+        case medium = "Medium"
+        case far = "Far"
+
+
+        var id: Zoom {
+            return self
+        }
+    }
+
     var body: some View {
         Map(position: .constant(.region(region)))
     }
