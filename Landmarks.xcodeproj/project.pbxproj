@@ -31,11 +31,21 @@
 			);
 			target = 85656CA22D0D684B0094B0E9 /* MacLandmarks */;
 		};
+		85656E782D0FCAC90094B0E9 /* Exceptions for "MacLandmarks" folder in "Landmarks" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				LandmarkCommands.swift,
+			);
+			target = 856F9EBC2D0BEEA500D3EFA7 /* Landmarks */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		85656CA42D0D684C0094B0E9 /* MacLandmarks */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				85656E782D0FCAC90094B0E9 /* Exceptions for "MacLandmarks" folder in "Landmarks" target */,
+			);
 			path = MacLandmarks;
 			sourceTree = "<group>";
 		};
