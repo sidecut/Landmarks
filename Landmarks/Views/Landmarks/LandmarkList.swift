@@ -41,13 +41,14 @@ struct LandmarkList: View {
 
     var body: some View {
         NavigationSplitView {
-            List {
+            List(selection: $selectedLandmark) {
                 ForEach(filteredLandmarks) { landmark in
                     NavigationLink {
                         LandmarkDetail(landmark: landmark)
                     } label: {
                         LandmarkRow(landmark: landmark)
                     }
+                    .tag(landmark)
                 }
             }
             .animation(.default, value: filteredLandmarks)
