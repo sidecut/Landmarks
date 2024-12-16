@@ -12,7 +12,17 @@ struct LandmarkSettings: View {
     private var zoom: MapView.Zoom = .medium
 
     var body: some View {
-        Text("Hello, World!")
+        Form {
+            Picker("Map Zoom:", selection: $zoom) {
+                ForEach(MapView.Zoom.allCases) { level in
+                    Text(level.rawValue)
+                }
+            }
+            .pickerStyle(.inline)
+        }
+        .frame(width: 300)
+        .navigationTitle("Landmark Settings")
+        .padding(80)
     }
 }
 
