@@ -35,6 +35,15 @@ struct LandmarkList: View {
             .animation(.default, value: filteredLandmarks)
             .navigationTitle("Landmarks")
             .frame(minWidth: 300)
+            .toolbar {
+                ToolbarItem {
+                    Menu {
+
+                    } label: {
+                        Label("Filter", systemImage: "slider.horizontal.3")
+                    }
+                }
+            }
         } detail: {
             Text("Select a landmark")
         }
