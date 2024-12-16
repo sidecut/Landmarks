@@ -5,4 +5,9 @@
 //  Created by James Raden on 12/15/24.
 //
 
-import Foundation
+import SwiftUI
+
+struct LandmarkCommands: Commands {
+    var body: some Commands {
+    }
+}
