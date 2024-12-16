@@ -31,6 +31,7 @@ struct LandmarkRow: View {
                     .foregroundStyle(.yellow)
             }
         }
+        .padding(.vertical, 4)
     }
 }
 
