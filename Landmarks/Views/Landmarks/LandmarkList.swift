@@ -29,6 +29,11 @@ struct LandmarkList: View {
         }
     }
 
+    var title: String {
+        let title = filter == .all ? "Landmarks" : filter.rawValue
+        return showFavoritesOnly ? "Favorite \(title)" : title
+    }
+
     var body: some View {
         NavigationSplitView {
             List {
@@ -41,7 +46,7 @@ struct LandmarkList: View {
                 }
             }
             .animation(.default, value: filteredLandmarks)
-            .navigationTitle("Landmarks")
+            .navigationTitle(title)
             .frame(minWidth: 300)
             .toolbar {
                 ToolbarItem {
