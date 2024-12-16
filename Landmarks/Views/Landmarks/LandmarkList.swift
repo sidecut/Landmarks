@@ -40,6 +40,8 @@ struct LandmarkList: View {
     }
 
     var body: some View {
+        @Bindable var modelData = modelData
+
         NavigationSplitView {
             List(selection: $selectedLandmark) {
                 ForEach(filteredLandmarks) { landmark in
@@ -75,6 +77,7 @@ struct LandmarkList: View {
         } detail: {
             Text("Select a landmark")
         }
+        .focusedValue(\.selectedLandmark, $modelData.landmarks[index ?? 0])
     }
 }
 
