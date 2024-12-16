@@ -11,6 +11,9 @@ import SwiftUI
 struct MapView: View {
     var coordinate: CLLocationCoordinate2D
 
+    @AppStorage("MapView.zoom")
+    private var zoom: Zoom = .medium
+
     enum Zoom: String, CaseIterable, Identifiable {
         case near = "Near"
         case medium = "Medium"
